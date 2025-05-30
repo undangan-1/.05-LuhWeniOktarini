@@ -75,6 +75,22 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+      @layer utilities {
+    @keyframes fadeInClear {
+      0% {
+        filter: blur(10px);
+        opacity: 0;
+      }
+      100% {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+    .animate-fade-in-clear {
+      animation: fadeInClear 1.5s ease-out forwards;
+    }
+  }
     </style>
   </head>
 
@@ -125,15 +141,16 @@
     <!-- Main Content -->
     <div id="undangan" class="isi hidden">
       <!-- Opening Section -->
-          <section class="flex justify-center">
+        <section class="flex justify-center">
   <div class="w-full max-w-md md:max-w-lg lg:max-w-xl px-4">
     <img
       src="./img/latar/cover(3).png"
       alt="latar4"
-      class="w-full mt-5"
+      class="w-full mt-5 animate-fade-in-clear"
     />
   </div>
 </section>
+
 
 
       <section class="py-8 px-4 text-center">
